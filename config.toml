@@ -1,0 +1,44 @@
+baseURL = "https://blog.noahstride.co.uk/"
+languageCode = "en-gb"
+title = "Noah Stride"
+theme = "cactus"
+googleAnalytics = "UA-131338540-3"
+
+[params]
+  colortheme = "dark"
+  description = "Writings & ramblings of a Backend Engineer."
+  mainSection = "posts" # your main section
+  showAllPostsOnHomePage = false # default
+  postsOnHomePage = 5 # this option will be ignored if showAllPostsOnHomePage is set to true
+  tagsOverview = true # show tags overview by default.
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "All posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 3
+
+[[menu.main]]
+name = "About me"
+url = "/about"
+weight = 4
+
+[[menu.main]]
+name = "CV"
+url = "/cv"
+weight = 5
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 2

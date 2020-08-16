@@ -1,0 +1,7 @@
+{
+  "editor.rulers": [
+  120
+  ],
+  "editor.wordWrap": "wordWrapColumn",
+  "html.format.wrapLineLength": 80
+}
