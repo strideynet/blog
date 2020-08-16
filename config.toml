@@ -1,4 +1,4 @@
-baseURL = "https://blog.noahstride.co.uk/"
+baseURL = "https://noahstride.co.uk/"
 languageCode = "en-gb"
 title = "Noah Stride"
 theme = "cactus"
