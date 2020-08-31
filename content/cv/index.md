@@ -29,7 +29,7 @@ Technologies I consider myself most acquainted with will be marked with bold tex
 - **GCP**
 - Istio
 - Prometheus & Grafana (and producing actionable metrics)
-- Deploying Kubernetes
+- Deploying Kubernetes (Kubespray)
 - Managing physical hardware & Linux hosts
 - Fundamentals of networking (CCENT)
 
@@ -37,8 +37,10 @@ Technologies I consider myself most acquainted with will be marked with bold tex
 
 ### WalkUp | Senior Backend Engineer | June 2020 - Ongoing
 
-Leading the efforts to scale the backend from handling 40,000 seated guests per week to in excess of 500,000 per week in
-the space of a couple months.
+When I started at WalkUp I was the engineer responsible for scaling the backend from handling 40,000 guests per week to
+in excess of 800,000 per week in just three months. This involved scoping out reliability and scaling issues within
+a pre-existing codebase and rectifying them, whilst maintaining a balance with the development of new features to
+improve the service. As the company grew, I took on the mentorship of a junior backend engineer.
 
 Event-driven microservices architecture with a focus on reliability & scaleability, using techs such as:
 
@@ -48,9 +50,6 @@ Event-driven microservices architecture with a focus on reliability & scaleabili
 - RabbitMQ
 - Redis
 - Firestore
-
-As with any startup, experience working with limited resource & striking the balance between dealing with technical debt
-and feature development.
 
 ### Cudo Ventures | Software Engineer | August 2018 - May 2020
 
