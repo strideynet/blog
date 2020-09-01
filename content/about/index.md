@@ -18,6 +18,6 @@ Find me online:
 Or ping me an email: hi@noahstride.co.uk
 
 I'm not actively looking for new opportunities, but if you've got something super exciting with worthy compensation
-package, please feel free to get in touch (unless you are in the Lending industry or an arms dealer).
+package, please feel free to get in touch (unless you are in the predatory payday lending industry or an arms dealer).
 
 **So long, and thanks for all the fish**
