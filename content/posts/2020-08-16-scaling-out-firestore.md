@@ -1,5 +1,5 @@
 ---
-title: Scaling Firestore & Lessons we learnt
+title: Scaling Firestore & lessons we learnt
 date: 2020-08-16 09:00:00
 tags:
 - Firestore
