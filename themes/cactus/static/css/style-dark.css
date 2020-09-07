@@ -444,6 +444,7 @@ body td {
   font-family: "JetBrains Mono";
   src: local("JetBrains Mono"), url("../lib/JetBrainsMono/ttf/JetBrainsMono-Regular.ttf") format("truetype");
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 *,
 *:before,
 *:after {
@@ -464,8 +465,8 @@ body {
   color: #c9cacc;
   font-display: swap;
   font-weight: 400;
-  font-size: 14px;
-  font-family: "JetBrains Mono", monospace;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.725;
   text-rendering: geometricPrecision;
   flex: 1;
@@ -490,6 +491,8 @@ body {
   -moz-hyphens: manual;
   -ms-hyphens: manual;
   -webkit-hyphens: manual;
+  font-size: 14px;
+  font-family: 'JetBrains Mono', monospace;
 }
 .content a {
   color: #c9cacc;
