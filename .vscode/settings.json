@@ -3,5 +3,12 @@
   120
   ],
   "editor.wordWrap": "wordWrapColumn",
-  "html.format.wrapLineLength": 80
+  "html.format.wrapLineLength": 80,
+  "editor.wordWrapColumn": 80,
+  "[markdown]": {
+
+    "editor.wordWrap": "bounded",
+    "editor.quickSuggestions": false,
+    "editor.wordWrapColumn": 120
+  }
 }
