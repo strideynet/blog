@@ -63,6 +63,114 @@ Now that we know it's possible to achieve what we are trying to do, it comes to 
 
 Of course, the only way to really answer this question would be to set out and actually write some manifests in Go using the Kubernetes types.
 
+I decided it would be reasonable to write out a single deployment, and then export it as YAML.
+
+### YAML
+
+Out of interest, I tried marshalling the pod spec to YAML (with no particular expectations of it working) and found that it does indeed produce incorrectly named keys. If you require YAML, and not JSON, you'll need to marshal to JSON
+and then into YAML, or obtain a custom YAML marshaller that supports the ``json`` struct tag.
+
+I decided to give a random package (``"github.com/ghodss/yaml"``) a chance at converting the structure to YAML. This did in fact work as I expected, but I do prefer to avoid third party packages where possible so this is something I'd look to try and replace, or at least investigate with a bit more detail.
+
+### The Code
+
+I've trimmed this file to only show the more interesting parts and you can find the full version here on [Github](https://github.com/strideynet/go-k8s-caac/blob/main/00-basics/basics.go).
+
+```golang
+var podLabels = map[string]string{
+	"app.kubernetes.io/name":      "sheep",
+	"app.kubernetes.io/component": "api",
+	"app.kubernetes.io/part-of":   "farm",
+}
+
+var replicaCount int32 = 3
+
+var containers = []corev1.Container{
+	{
+		Name:  "api",
+		Image: "gcr.io/farm-manager/sheep-api:latest",
+
+		Ports: []corev1.ContainerPort{
+			{
+				Name:          "http",
+				ContainerPort: 80,
+			},
+		},
+	},
+}
+
+var deployment = appsv1.Deployment{
+	TypeMeta: v1.TypeMeta{
+		Kind:       "Deployment",
+		APIVersion: "apps/v1",
+	},
+	ObjectMeta: v1.ObjectMeta{
+		Name:      "sheep-api",
+		Namespace: "default",
+	},
+	Spec: appsv1.DeploymentSpec{
+		Replicas: &replicaCount,
+		Selector: &v1.LabelSelector{
+			MatchLabels: podLabels,
+		},
+
+		Template: corev1.PodTemplateSpec{
+			ObjectMeta: v1.ObjectMeta{
+				Labels: podLabels,
+			},
+
+			Spec: corev1.PodSpec{
+				Containers: containers,
+			},
+		},
+	},
+}
+```
+
+There's a few observations I'd like to make. The first being that it would appear that there are no stricter typings than string applied to the API Version and Kind for the deployment. This is annoying because one of the primary reasons I wanted to use Golang was to avoid potentially invalid manifests. I can see two paths to rectify this:
+
+- Introduce a helper function that produces a default deployment that we can then decorate
+- Produce some kind of validator to run as a final step to validate the files are correct
+
+It's entirely possible that a validator or similar already exists, however, I do quite like the idea of a function that produces a resource with sensible defaults since quite often I'd expect to have very similar configuration across a large number of the resources, especially when handling micro-services of a single language. In an ideal world, we would also run the validator as part of a test suite to ensure generated manifests were good.
+
+The generated YAML is sensible and there's no major surprises here:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: sheep-api
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: api
+      app.kubernetes.io/name: sheep
+      app.kubernetes.io/part-of: farm
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/component: api
+        app.kubernetes.io/name: sheep
+        app.kubernetes.io/part-of: farm
+    spec:
+      containers:
+      - image: gcr.io/farm-manager/sheep-api:latest
+        name: api
+        ports:
+        - containerPort: 80
+          name: http
+        resources: {}
+status: {}
+```
+
+Overall I was quite pleased, but it would take a more complicated example to be able to compare it like for like with Helm.
+
 ## Something a bit more complex
 
 ## Evaluation
