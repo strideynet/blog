@@ -5,15 +5,11 @@ tags:
 - Helm
 - Kubernetes
 - Go
-categories:
-- Tech
 ---
 
 *This post is still work in progress :)*
 
-A lot about Helm leaves me extremely dissatisfied, especially as manifests grow more complicated and I aim to reduce
-duplication. The templating language itself always leaves me thinking that there simply has to be a better
-way of doing this that doesn't involve painstakingly adding ``{{ indent xyz }}`` and carefully stripping whitespace.
+A lot about Helm leaves me extremely dissatisfied, especially as manifests grow more complicated and I aim to reduce duplication. The templating language itself always leaves me thinking that there simply has to be a better way of doing this that doesn't involve painstakingly adding ``{{ indent xyz }}`` and carefully stripping whitespace.
 
 It occurred to me that it must be possible to use the Kubernetes API types to directly define or generate these manifests from Go code, thus allowing us to use standard Go loops and conditionals or even including entire pre-written sections with the benefits of type-checking and editor auto-complete when working on more complex manifests. But would it be better or worse?
 

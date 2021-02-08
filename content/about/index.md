@@ -1,5 +1,6 @@
 ---
 title: About Me
+weight: 100
 ---
 Hey! I'm Noah, a software engineer based on the South Coast of the United Kingdom. Outside of work, you can find me playing bass, running or playing video games.
 

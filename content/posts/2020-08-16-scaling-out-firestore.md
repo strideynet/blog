@@ -4,8 +4,6 @@ date: 2020-08-16 09:00:00
 tags:
 - Firestore
 - Scaling
-categories:
-- Tech
 ---
 
 Firestore (or GCP Datastore), as a concept, is pretty appealing: an (almost) infinitely scaleable, high availability NoSQL database.
@@ -19,7 +17,7 @@ default firestore implementation, then there's not a huge issue here, but if you
 **absolutely imperative that you ensure the higher order bits (the start of the ID) are random** as the documents are
 range-sharded based on these higher order bits.
 
-If you use a timestamp as part of these higher order bits, you essentially gaurantee that even if Firestore continues
+If you use a timestamp as part of these higher order bits, you essentially guarantee that even if Firestore continues
 to scale your database out across more nodes, and your application fetches more recent documents more often than
 older documents (which is likely), that performance for reads and writes will degrade.
 

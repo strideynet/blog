@@ -35,7 +35,20 @@ Technologies I consider myself most acquainted with will be marked with bold tex
 
 ## Employments
 
-### WalkUp | Senior Backend Engineer | June 2020 - Ongoing
+### Cudo Ventures | Senior Engineer | December 2020 - Present
+
+I returned to Cudo to take a lead on SRE and Operations matters. I have continued to push for the uptake of Go and
+microservices at Cudo, using my experience from WalkUp.
+
+Using the following techs:
+
+- Kubernetes on GCP
+- Prometheus, Grafana and Chronosphere
+- Pulumi & Helm
+- Go, Node (Typescript and Javascript)
+- MySQL
+
+### WalkUp | Senior Backend Engineer | June 2020 - December 2020
 
 When I started at WalkUp I was the engineer responsible for scaling the backend from handling 40,000 guests per week to
 in excess of 800,000 per week in just three months. This involved scoping out reliability and scaling issues within
@@ -51,7 +64,7 @@ Event-driven microservices architecture with a focus on reliability & scaleabili
 - Redis
 - Firestore
 
-### Cudo Ventures | Software Engineer | August 2018 - May 2020
+### Cudo Ventures | Software Engineer | August 2018 - June 2020
 
 I joined Cudo Ventures as a fullstack engineer straight out of college, working on the NodeJS API, Electron App and Vue
 web app, but as the team grew my role to focus solely on backend development and infrastructure, eventually providing

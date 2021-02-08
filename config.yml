@@ -1,0 +1,35 @@
+baseURL: https://noahstride.co.uk/
+title: Noah Stride
+theme: PaperMod
+googleAnalytics: UA-131338540-3
+
+params:
+  env: production
+  title: Noah Stride
+  description: Writings & ramblings of a backend engineer.
+  author: Noah Stride
+  homeInfoParams:
+    Title: Howdy 🤠
+    Content: Welcome to the writings & ramblings of a backend engineer.
+  socialIcons:
+  - name: github
+    url: https://github.com/strideynet
+  - name: linkedin
+    url: https://www.linkedin.com/in/noah-stride/
+menu:
+  main:
+  - name: "Home"
+    url: "/"
+    weight: 1
+  - name: "All posts"
+    url: "/posts"
+    weight: 2
+  - name: "Tags"
+    url: "/tags"
+    weight: 3
+  - name: "About me"
+    url: "/about"
+    weight: 4
+  - name: "CV"
+    url: "/cv"
+    weight: 5

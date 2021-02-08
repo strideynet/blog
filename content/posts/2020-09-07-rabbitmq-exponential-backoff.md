@@ -4,8 +4,6 @@ date: 2020-09-07 09:00:00
 tags:
 - RabbitMQ
 - Scaling
-categories:
-- Tech
 ---
 
 RabbitMQ is a fantastic piece of infrastructure for building event driven systems, but it's far too easy to skip a key implementation detail early on (in haste, or ignorance) and end up creating extremely fragile systems. What I am referring to here is Message Redelivery and the need for some form of back-off.

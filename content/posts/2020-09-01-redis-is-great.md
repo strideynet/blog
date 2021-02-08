@@ -4,8 +4,6 @@ date: 2020-09-01 09:00:00
 tags:
 - Redis
 - Thoughts
-categories:
-- Tech
 ---
 
 It's not often that a piece of tech really gets me excited, or at least excited enough to rant about it. Redis is one of
