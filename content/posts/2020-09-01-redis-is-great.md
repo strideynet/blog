@@ -6,9 +6,7 @@ tags:
 - Thoughts
 ---
 
-It's not often that a piece of tech really gets me excited, or at least excited enough to rant about it. Redis is one of
-the few that are lucky enough to have a place close to my heart (and it has for a few years), and its there for a many reasons
-but one part is key:
+It's not often that a piece of tech really gets me excited, or at least excited enough to rant about it. Redis is one of the few that are lucky enough to have a place close to my heart (and it has for a few years), and it's there for a many reasons but one part is key:
 
 > Redis encapsulates doing something simple well
 
