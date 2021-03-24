@@ -1,6 +1,6 @@
 ---
 title: "Go: stop using sql.Open!"
-date: 2021-02-20 09:00:00
+date: 2021-03-21 09:00:00
 tags:
 - Go
 ---
