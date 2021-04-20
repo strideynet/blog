@@ -66,7 +66,7 @@ func connect() (*sql.DB, error){
         return nil, err
     }
 
-    db, err := sql.OpenDB()
+    db, err := sql.OpenDB(connector)
     if err != nil {
         return nil, err
     }
