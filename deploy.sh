@@ -1,1 +1,0 @@
-hugo && netlify deploy --prod
