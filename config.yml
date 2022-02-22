@@ -3,10 +3,9 @@ title: Noah Stride
 theme: hugo-bearblog
 googleAnalytics: UA-131338540-3
 
-copyright: "Copyright 2022, Noah Stride."
+enableRobotsTXT: true
+
 params:
   env: production
-  title: Noah Stride
   description: Writings & ramblings of a backend engineer.
-
-  author: Noah Stride
+  title: Noah Stride
