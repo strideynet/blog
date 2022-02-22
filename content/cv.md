@@ -47,7 +47,7 @@ I joined Krystal to bring Go expertise to a team of already strong Ruby engineer
 #### Achievements
 
 - Mentored other engineers on idiomatic Go, using my experience to help engineers experienced with Ruby come up to speed with the language
-- Took responsibility for the Kubernetes PAAS offered on Katapult, building an operator to provision control plane components for customer clusters and a CCM for those clusters to integrate with other products on the Katapult platform
+- Took responsibility for the Kubernetes PAAS offered on Katapult, building an operator to provision control plane components for customer clusters and a [CCM](https://github.com/krystal/kce-ccm) for those clusters to integrate with other products on the Katapult platform
 - Built a [bespoke tool](https://github.com/krystal/guvnor) for simply managing the deployment of containerised applications onto Linux hosts where the complexity of Kubernetes was unnecessary
 
 #### Technologies
