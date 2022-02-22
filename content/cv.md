@@ -89,7 +89,7 @@ Event-driven microservices architecture with a focus on reliability & scalabilit
 
 I joined Cudo Ventures as a fullstack engineer straight out of college, working on the NodeJS API, Electron App and Vue web app, but as the team grew my role to focus solely on backend development and infrastructure, eventually providing support and mentoring as Cudo used Go in production for the first time.
 
-At Cudo, I held multiple responsibilites from managing the Kubernetes clusters, infrastructure tools (e.g Prometheus/Grafana) and deployment mechanisms, as well as working directly with customers where they had more unusual deployments of our product into datacenter environments. As one of the engineers with a more indepth understanding of Linux, networking and datacenter environments, I was able to provide insight and knowledge to other members of the team.
+At Cudo, I held multiple responsibilites from managing the Kubernetes clusters, infrastructure tools (e.g Prometheus/Grafana) and deployment mechanisms, as well as working directly with customers where they had more unusual deployments of our product into datacenter environments. As one of the engineers with a more in-depth understanding of Linux, networking and datacenter environments, I was able to provide insight and knowledge to other members of the team.
 
 #### Technologies
 

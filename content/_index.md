@@ -2,7 +2,7 @@ Hey! I'm Noah, a software engineer based in London. Outside of work, you can fin
 
 ### 👨‍💻 Work
 
-I love working with Go & building systems that integrates with Kubernetes and other container technologies. I've got passable frontend experience with Vue and React, but I'd much rather be knees-deep in an API. I consider my top three things to be:
+I love working with Go & building systems that integrate with Kubernetes and other container technologies. I've got passable frontend experience with Vue and React, but I'd much rather be knee-deep in an API. I consider my top three things to be:
 
 - Go
 - Kubernetes
@@ -15,7 +15,7 @@ In terms of softer skills, I've really come to enjoy mentoring more junior engin
 
 ### 🤙 Find me online
 
-- [Github](https://github.com/strideynet)
+- [GitHub](https://github.com/strideynet)
 - [Keybase](https://keybase.io/strideynet)
 - [LinkedIn](https://www.linkedin.com/in/noah-stride/)
 - [Flickr](https://www.flickr.com/photos/nstride/)
@@ -28,3 +28,5 @@ Or ping me an email: hi@noahstride.co.uk
 I'm not actively looking for new opportunities, but if you are an internal recruiter or hiring manager and have got something super exciting with worthy compensation, please feel free to get in touch (unless it's crypto, arms dealing or predatory lending). I usually am not interested in working with agency recruitment.
 
 ***So long, and thanks for all the fish***
+
+***><(((º>***
