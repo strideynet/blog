@@ -5,6 +5,7 @@ tags:
 - Helm
 - Kubernetes
 - Go
+draft: true
 ---
 
 *This post is still work in progress :)*

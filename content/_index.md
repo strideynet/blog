@@ -1,19 +1,16 @@
----
-title: About Me
-weight: 100
----
 Hey! I'm Noah, a software engineer based on the South Coast of the United Kingdom. Outside of work, you can find me playing bass, running or playing video games.
 
-I prefer working with backend/infrastructure, but can also build passable front-ends when needed. I could bore you with a long list, but I won't, so here's my top three things:
+I love working with Go & infrastructure (especially GCP):
 
-- Golang
+- Go
 - Kubernetes
-- Typescript/Javascript NodeJS
+- SRE/DevOps (Observability)
 
 Find me online:
 
 - [Github](https://github.com/strideynet)
 - [Keybase](https://keybase.io/strideynet)
+- [LinkedIn](https://www.linkedin.com/in/noah-stride/)
 - [Flickr](https://www.flickr.com/photos/nstride/)
 
 Or ping me an email: hi@noahstride.co.uk

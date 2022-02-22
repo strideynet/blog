@@ -1,10 +1,13 @@
 ---
 title: CV
+menu: main
 ---
+# CV
+
 Passionate backend software engineer who is driven by a need to solve new and interesting problems.
 Experienced in scaling out startups with limited resources.
 
-## Overview of Skills
+## Overview
 
 Technologies I consider myself most acquainted with will be marked with bold text.
 
@@ -33,9 +36,13 @@ Technologies I consider myself most acquainted with will be marked with bold tex
 - Managing physical hardware & Linux hosts
 - Fundamentals of networking (CCENT)
 
-## Employments
+## Experience
 
-### Cudo Ventures | Senior Engineer | December 2020 - Present
+### Krystal | Senior Engineer | April 2021 - Present
+
+More info coming soon :)
+
+### Cudo Ventures | Senior Engineer | December 2020 - April 2021
 
 I returned to Cudo to take a lead on SRE and Operations matters. I have continued to push for the uptake of Go and
 microservices at Cudo, using my experience from WalkUp.
