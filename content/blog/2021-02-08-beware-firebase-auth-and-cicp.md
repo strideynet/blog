@@ -32,4 +32,4 @@ The second restriction I see, is that MFA seems to only be possible for initial 
 
 ## Summary
 
-Whilst the ability for CICP to help in bootstraping quickly is fantastic, more attention is needed to the security of the platform if it is to remain viable for projects where users require the utmost security. I look forward to what Google may have to offer in future with this platform, but there is a long way to go before I will be considering using it on any new projects.
+Whilst CICP helps you bootstrap quickly, more attention is needed to the security of the platform if it is to remain viable for projects where users require the utmost security. I look forward to what Google may have to offer in future with this platform, but there is a long way to go before I will be considering using it on any new projects.

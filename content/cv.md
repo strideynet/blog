@@ -40,7 +40,23 @@ Technologies I consider myself most acquainted with will be marked with bold tex
 
 ## Experience
 
-### Krystal | Senior Engineer | April 2021 - Present
+### Teleport | Software Engineer *IV* | May 2022 - Present
+
+In May 2022, I joined Teleport to work on an exciting infrastructure product. Teleport provides a range of interesting challenges, with a focus on security and integrations with Linux and other popular infrastructure tools.
+
+Teleport is primarily an Open Source product, you can check out my contributions [on GitHub](https://github.com/gravitational/teleport/pulls?q=is%3Apr+author%3Astrideynet+).
+
+#### Achievements
+
+- Survived my first two weeks :3
+
+#### Technologies
+
+- Go
+- Linux
+- Kubernetes
+
+### Krystal | Senior Engineer | April 2021 - April 2022
 
 I joined Krystal to bring Go expertise to a team of already strong Ruby engineers who were interested in branching out to Go as part of their Katapult cloud platform.
 
@@ -87,7 +103,7 @@ Event-driven microservices architecture with a focus on reliability & scalabilit
 
 ### Cudo Ventures | Software Engineer | August 2018 - June 2020
 
-I joined Cudo Ventures as a fullstack engineer straight out of college, working on the NodeJS API, Electron App and Vue web app, but as the team grew my role to focus solely on backend development and infrastructure, eventually providing support and mentoring as Cudo used Go in production for the first time.
+I joined Cudo Ventures as a fullstack engineer straight out of college, working on the NodeJS API, Electron App and Vue web app, but as the team grew my role shifted to focus solely on backend development and infrastructure, eventually providing support and mentoring as Cudo used Go in production for the first time.
 
 At Cudo, I held multiple responsibilites from managing the Kubernetes clusters, infrastructure tools (e.g Prometheus/Grafana) and deployment mechanisms, as well as working directly with customers where they had more unusual deployments of our product into datacenter environments. As one of the engineers with a more in-depth understanding of Linux, networking and datacenter environments, I was able to provide insight and knowledge to other members of the team.
 
