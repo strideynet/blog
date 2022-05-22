@@ -6,7 +6,7 @@ tags:
 - Thoughts
 ---
 
-At the start of May, I embarked on a new adventure: joining Teleport as a Software Engineer. It was a bittersweet moment, because I'd really enjoyed my work at Krystal and was worried that the culture of Teleport might not match that of Krystal, but I decided to take the jump because Teleport was a product that had me really excited. I'd trialled it a few years ago, and I really felt that Teleport would offer me the chance to get knuckles deep on a project that integrates tightly with Linux.
+At the start of May, I embarked on a new adventure: joining Teleport as a Software Engineer. It was a bittersweet moment, because I'd really enjoyed my work at Krystal and was worried that the culture of Teleport might not match that of Krystal, but I decided to take the jump because Teleport was a product that had me really excited. I'd trialled it a few years ago, and I really felt that Teleport would offer me the chance to get knuckles deep on a project that's really pushing new ground.
 
 ---
 
