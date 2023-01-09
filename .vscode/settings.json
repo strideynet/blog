@@ -6,9 +6,12 @@
   "html.format.wrapLineLength": 80,
   "editor.wordWrapColumn": 80,
   "[markdown]": {
-
     "editor.wordWrap": "bounded",
-    "editor.quickSuggestions": false,
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    },
     "editor.wordWrapColumn": 120
   }
 }
