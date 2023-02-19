@@ -27,23 +27,45 @@ I've got a few tips for making them a bit more edible:
 
 I'll try and rank these in my order of preference.
 
+### Spaghetti Carbonara
+
+Currently my favourite flavour! It's a pretty run of the mill carbonara, with small pieces of spaghetti as the carbohydrate. It also comes with some vegan smokey bacon bits - these are great !
+
+I've found it's great by itself.
+
+Tips:
+
+- Black pepper !
+
 ### Madras
 
-My favourite flavour and also the spiciest one they offer. It mostly tastes of hot, curry and tomato (in that order). This combination is relatively appealing to me, but it might not be to you.
+One of my favourite flavours and also the spiciest one they offer. It mostly tastes of hot, curry and tomato (in that order). This combination is relatively appealing to me, but it might not be to you.
 
 The carbohydrate in it appears to be chunks of sweet potato, which is actually quite nice and filling.
 
 The spiciness of it means it doesn't really need any modifications.
 
+### Pasta Bolognese
+
+A fairly decent tomatoey sauce on some penne like pieces of pasta. It does have a tendency to not rehydrate the pasta
+all the way, so can be a little crunchy. Make sure to stir well and add a little additional boiling water to avoid this.
+
+It's a little neutral in flavour, but edible.
+
+Tips:
+
+- Black pepper
+- Hot sauce for some kick !
+
 ## Mac and Cheeze
 
 It's remarkably edible, and probably the closest Huel Hot and Savoury I've had to a real meal I might eat. The carbohydrate is bits of pasta, and this gives you something to actualy chew which is nice. There's some weird dry chewy bits of tomato they've put in, those are weird...
 
-It lacks much flavour, but I find that most real mac and cheese does. Add lashings of hot sauce to rectify.
+It lacks much flavour, but I find that most real mac and cheese does, and it does have sort of a grainy/fake flavour to it. Add lashings of hot sauce to rectify.
 
 Tips:
 
-- Add shit tonnes of your favourite hot sauce.
+- Add shit tonnes of your favourite hot sauce
 - Make sure you mix really well when adding water, or you'll end up with crunchy bits of pasta.
 
 ### Thai Green
