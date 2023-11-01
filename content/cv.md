@@ -1,8 +1,6 @@
 ---
 title: CV
-menu: main
 ---
-# CV
 
 Passionate backend software engineer who is driven by a need to solve new and interesting problems. Experienced in scaling out startups with limited resources.
 

@@ -1,11 +1,20 @@
 baseURL: https://noahstride.co.uk/
 title: Noah Stride
-theme: hugo-bearblog
+theme: archie
 googleAnalytics: UA-131338540-3
 
-enableRobotsTXT: true
-
 params:
-  env: production
-  description: Writings & ramblings of a backend engineer.
-  title: Noah Stride
+  subtitle: "Writings & ramblings of a backend engineer."
+  mode: toggle
+
+menu:
+  main:
+  - name: Home
+    url: "/"
+    weight: 1
+  - name: Blog
+    url: "/blog"
+    weight: 2
+  - name: CV
+    url: "/cv"
+    weight: 3
