@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	{{ partial "header.html" . }}
+	<body>
+		<div class="content">
+			{{ partial "head.html" . }}
+			
+			<div class="site-description">
+				{{- if isset .Site.Params "subtitle" -}}
+				<p>{{ .Site.Params.Subtitle | markdownify }}</p>
+				{{- end -}}
+			</div>
+			{{ .Content }}
+			
+			{{ partial "footer.html" . }}
+		</div>
+	</body>
+</html>
