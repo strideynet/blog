@@ -2,11 +2,8 @@
   "editor.rulers": [
   120
   ],
-  "editor.wordWrap": "wordWrapColumn",
-  "html.format.wrapLineLength": 80,
-  "editor.wordWrapColumn": 80,
   "[markdown]": {
-    "editor.wordWrap": "bounded",
+    "editor.wordWrap": "wordWrapColumn",
     "editor.quickSuggestions": {
       "comments": "off",
       "strings": "off",

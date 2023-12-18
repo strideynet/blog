@@ -103,12 +103,5 @@
 	{{- end }}
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PC65MQESZB"/>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	
-	  gtag('config', 'G-PC65MQESZB');
-	</script>
+	{{ template "_internal/google_analytics.html" . }}
 </head>

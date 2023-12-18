@@ -1,7 +1,7 @@
 baseURL: https://noahstride.co.uk/
 title: Noah Stride
 theme: marchie
-googleAnalytics: UA-131338540-3
+googleAnalytics: G-PC65MQESZB
 
 params:
   subtitle: "Writings & ramblings of a backend engineer."
