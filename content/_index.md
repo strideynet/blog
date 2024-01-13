@@ -6,16 +6,11 @@ Hey! I'm Noah, a software engineer based in London. Outside of work, you can fin
 
 ## 👨‍💻 Work
 
-I love working with Go & building systems that integrate with Kubernetes and other container technologies. I've got passable frontend experience with Vue and React, but I'd much rather be knee-deep in an API. I consider my top three things to be:
+I'm a product-focussed engineer on a mission to meet users' needs - whether they be an internal team or a customer. You'll find me happiest in a role which lets me engage with users and participate actively in the product process, and solve plenty of challenging technical problems! 
 
-- Go
-- Kubernetes
-- SRE/DevOps
-  - Observability
-  - GCP
-  - Reliability & Incident Management
+I currently lead a team that builds products in the workload identity space (an emerging field that's captured my heart), but over the past few years I've worked as a backend engineer and SRE at a variety of startups.
 
-In terms of softer skills, I've really come to enjoy mentoring more junior engineers. When it comes to building products, I'm a huge fan of the Lean Startup's scientific approach to building incremental MVPs closely with customers to ensure that the product meets a real need.
+For all the details, check out [my CV](/cv).
 
 ## 🤙 Find me online
 

@@ -2,57 +2,61 @@
 title: CV
 ---
 
-Passionate backend software engineer who is driven by a need to solve new and interesting problems. Experienced in scaling out startups with limited resources.
+I'm Noah and I'm a product-focussed engineer on a mission to meet users' needs - whether they be an internal team or a customer. You'll find me happiest in a role which lets me engage with users and participate actively in the product process, and solve plenty of challenging technical problems!
+
+I currently lead a team that builds products in the workload identity space (an emerging field that's captured my heart), but over the past few years I've worked as a backend engineer and SRE at a variety of startups.
 
 ## Overview
 
-Technologies I consider myself most acquainted with will be marked with bold text.
+Let's get the keywords out of the way! Here's a list of my top technical skills:
 
-### Backend
+- Go
+- Distributed systems (microservices etc.)
+- Protobuf and gRPC
+- Kubernetes
+- Product analytics (PostHog and Clickhouse)
+- Observability (OpenTelemetry and Prometheus)
+- Networking protocols: IP, TCP, TLS and SSH
+- Linux
+- SQL (Postgres)
+- Typescript
+- Google Cloud Platform
 
-- **Go**
-- **Javascript/Typescript**
-- SQL
-- Event driven systems (RabbitMQ, GCP PubSub)
-- Microservice architecture
+And my softer skills:
 
-### Ops/SRE
-
-- **Kubernetes**
-  - Deploying services onto Kubernetes
-  - Managing clusters
-- **GCP**
-- Observability
-  - Prometheus
-  - Grafana
-  - Jaeger
-- Incident Management
-- Managing physical hardware & Linux hosts
-  - Ansible
-- Fundamentals of networking (CCENT)
-
-### Frontend
-
-- **VueJS (VueX/Nuxt)**
-- React
+- Planning and executing the product and technical aspects of an MVP
+- Communicating with customers, providing support and performing interviews as part of product design
+- Incident response and management
+- Writing customer-facing documentation
+- Writing blog posts and delivering talks
+- Team leadership
+- Mentoring engineers
 
 ## Experience
 
-### Teleport | Software Engineer *IV* | May 2022 - Present
+### Teleport | Machine ID Team Lead | May 2022 - Present
 
-In May 2022, I joined Teleport to work on an exciting infrastructure product. Teleport provides a range of interesting challenges, with a focus on security and integrations with Linux and other popular infrastructure tools.
+Teleport is an open-source platform providing secure and easy zero trust access to infrastructure. You can check out my contributions [on GitHub](https://github.com/gravitational/teleport/pulls?q=is%3Apr+author%3Astrideynet+).
 
-Teleport is primarily an Open Source product, you can check out my contributions [on GitHub](https://github.com/gravitational/teleport/pulls?q=is%3Apr+author%3Astrideynet+).
+I joined Teleport in May 2022 as a Software Engineer L4. 
+
+By August 2022, I had taken lead of the Machine ID team. In this role, I had ownership of the direction of Machine ID, planning the future of the product and leading the execution of this. In addition, I regularly engaged directly with customers: joining sales calls to explore implementation options with prospects, providing support for escalated issues, and interviewing customers to guide product direction.
 
 #### Achievements
 
-- Survived my first two weeks :3
+- Achieved strong growth of the Machine ID through a careful product process, basing decisions on a combination of customer interviews, detailed analytics data, and a researched understanding of the product market.
+- Delivered rapport with prospects and customers, resolving their issues and working closely with them to inform the future of Machine ID.
+- Participated in a small working group of engineers who identified technical debt and set out new best practices for the codebase.
+- Discovered and contributed to fixing several high/critical severity vulnerabilities.
+- Delivered blog posts and talks, representing myself and Teleport.
 
 #### Technologies
 
 - Go
 - Linux
 - Kubernetes
+- Workload Identity (SPIFFE)
+- gRPC
 
 ### Krystal | Senior Engineer | April 2021 - April 2022
 
