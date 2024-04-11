@@ -12,6 +12,12 @@ A collection of my fairly rough notes on TPMs and Go. These are woefully incompl
 
 ## TPMs
 
+### References
+
+- [A Practical Guide to TPM 2.0](https://library.oapen.org/handle/20.500.12657/28157): A super approachable book that provides an overview of TPM 2.0 - much easier to digest than the hundreds of pages of specifications!
+- [TPM Specification](https://trustedcomputinggroup.org/resource/tpm-library-specification/): Specification of the architecture of TPMs, and the commands that are available.
+- [TCG EK Credential Profile](https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-V-2.5-R2_published.pdf): Specification for Endorsement Keys and Endorsement Certificates, including their structure and where they shall be stored.
+
 ## TPMs in Go
 
 ### Libraries
