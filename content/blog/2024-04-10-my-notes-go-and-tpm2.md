@@ -22,6 +22,10 @@ A collection of my fairly rough notes on TPMs and Go. These are woefully incompl
 
 ### Libraries
 
+- [go-tpm](https://github.com/google/go-tpm): fairly decent module by Google for communicating with a TPM.
+- [go-attestation](https://github.com/google/go-attestation): module by Google which abstracts the individual commands offered by `go-tpm` and offers functionality related to generating an attestation from a TPM and validating that attestation. If your needs are fairly simple, you can usually use this module without directly using `go-tpm`.
+- [go-tpm-tools/simulator](https://github.com/google/go-tpm-tools/tree/main/simulator): useful package by Google that does the legwork of spinning up the Microsoft TPM2.0 simulator. Great if you want to write tests for your code that works with TPMs.
+
 ### Examples
 
 #### Writing an EKCert to the TPM Simulator
