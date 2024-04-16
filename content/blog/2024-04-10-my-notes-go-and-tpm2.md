@@ -75,3 +75,28 @@ func writeEKCertToTPM(t *testing.T, sim *tpmsimulator.Simulator, data []byte) {
 	require.NoError(t, err)
 }
 ```
+
+#### `x509: unhandled critical extension` when verifying an EKCert
+
+When verifying an EKCert with Go, you may find that you receive the following error:
+
+```
+x509: unhandled critical extension
+```
+
+The EKCert may contain information about the TPM within the SAN. As this extension is marked critical and because Go does not have the ability to parse this, it will throw an error when verifying the certificate.
+
+As a workaround, you can "hide" these unhandled critical extensions from Verify:
+
+```go
+var sanExtensionOID = []int{2, 5, 29, 17}
+
+var exts []asn1.ObjectIdentifier
+for _, ext := range ekCert.UnhandledCriticalExtensions {
+	if ext.Equal(sanExtensionOID) {
+		continue
+	}
+	exts = append(exts, ext)
+}
+ekCert.UnhandledCriticalExtensions = exts
+```
