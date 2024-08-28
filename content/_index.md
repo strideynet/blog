@@ -2,7 +2,7 @@
 title: Noah Stride
 ---
 
-Hey! I'm Noah, a software engineer based in London. Outside of work, you can find me DJing, climbing or playing video games. I'm a huge music fiend and can almost always be found listening to music. In the winter, I'll often be seen hitting the slopes.
+Hey! I'm Noah, a software engineer based in London. I'm a huge music fiend and can almost always be found listening to something! In the summer, I run and climb. In the winter, I ski. I'm also an [amateur radio enthusiast](./wiki/amateur-radio)!
 
 ## 👨‍💻 Work
 
@@ -11,6 +11,21 @@ I'm a product-focussed engineer on a mission to meet users' needs - whether they
 I currently lead a team that builds products in the workload identity space (an emerging field that's captured my heart), but over the past few years I've worked as a backend engineer and SRE at a variety of startups.
 
 For all the details, check out [my CV](/cv).
+
+## 🗞️ What's Up in Workload Identity
+
+I publish a monthly newsletter about Workload Identity. You might find it interesting!
+
+[https://workloadidentity.news/](https://workloadidentity.news/)
+
+## 📣 Talks
+
+- **Teleport Workload Identity with SPIFFE: Achieving Zero Trust in Modern Infrastructure**
+	- 23/05/2024 - Webinar
+	- https://www.youtube.com/watch?v=uqBZ1oNYo6c
+- **Machine ID: A whistle-stop tour!**
+	- 25/10/2023 - Teleport Connect 2023
+	- https://www.youtube.com/watch?v=8_gSaJzVYbI
 
 ## 🤙 Find me online
 

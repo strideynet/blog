@@ -1,14 +1,6 @@
 ---
-title: "My Notes on Go and TPM2.0"
-date: 2024-04-10 09:00:00
-tags:
-- Go
-- TPM
-- Tips
-- My Notes
+title: Go and TPM2.0
 ---
-
-A collection of my fairly rough notes on TPMs and Go. These are woefully incomplete and I make no promises as to their accuracy, but I figured getting these up on the site could be of value to someone else and if anything makes them easier for me to find myself!
 
 ## TPMs
 
@@ -98,5 +90,3 @@ for _, ext := range ekCert.UnhandledCriticalExtensions {
 	}
 	exts = append(exts, ext)
 }
-ekCert.UnhandledCriticalExtensions = exts
-```

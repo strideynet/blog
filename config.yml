@@ -15,6 +15,9 @@ menu:
   - name: Blog
     url: "/blog"
     weight: 2
+  - name: Wiki
+    url: "/wiki"
+    weight: 3
   - name: CV
     url: "/cv"
-    weight: 3
+    weight: 4
