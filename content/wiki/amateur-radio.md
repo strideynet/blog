@@ -13,8 +13,9 @@ less regular basis.
 I operate using:
 
 - Icom IC705
-- SOTABeam Bandhopper III
-- Alpha Antenna AL705 Magloop
+  - SOTABeam Bandhopper III
+  - Alpha Antenna AL705 Magloop
+- Anytone AT-D878UVII
 - LiteVNA
 
 Other interests:
