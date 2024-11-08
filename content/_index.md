@@ -20,6 +20,12 @@ I publish a monthly newsletter about Workload Identity. You might find it intere
 
 ## 📣 Talks
 
+- **Securing Modern Infrastructure with Teleport Workload Identity**
+	- 25/09/2024 - Teleport Connect 2024
+	- https://youtu.be/5Tuj895C-jc
+- **Achieving High Scalability with Teleport Machine ID**
+	- 25/09/2024 - Teleport Connect 2024
+	- Unrecorded.
 - **Teleport Workload Identity with SPIFFE: Achieving Zero Trust in Modern Infrastructure**
 	- 23/05/2024 - Webinar
 	- https://www.youtube.com/watch?v=uqBZ1oNYo6c
