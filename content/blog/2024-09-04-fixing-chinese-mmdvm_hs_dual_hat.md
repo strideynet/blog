@@ -31,7 +31,7 @@ It's fairly common that you can find the answer to most problems with a well-wri
 
 One forum thread felt like it had once contained the answer, with the original poster thanking someone for their answer. I had to re-read a couple of times before I realised that this answer had been deleted...
 
-## Firmware confusion
+## Firmware confusion
 
 I revisited one of my earlier discoveries - why had the modem been reporting a firmware that didn't match up with what I had been expecting. I figured the best next steps would be to try to flash the device with the firmware I had been expecting...
 
