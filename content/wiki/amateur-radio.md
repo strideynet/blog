@@ -1,5 +1,5 @@
 ---
-title: Amateur Radio (M7NOA)
+title: Amateur Radio (2E1OTT)
 ---
 
 Hey, I'm Noah - on the air, you'll know me as 2E1OTT. I obtained my foundation license in 2023 and my intermediate in 2025.
