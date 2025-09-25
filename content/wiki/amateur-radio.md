@@ -30,3 +30,12 @@ Callsign history:
   - From 11th August 2025
 - M7NOA 
   - From 27th September 2023 until 11th August 2025
+
+## Contests
+
+- 2025 RSGB SSB Field Day
+  - Multi-Op Low Power Unassisted Portable
+  - Leading Intermediate Station
+  - As 2E1OTT/P with 2E1PUP
+  - 148 QSOs - 16,896 points
+  - Error Rate: 3.23%
