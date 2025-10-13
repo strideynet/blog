@@ -1,0 +1,68 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { NanoVNASWRAnalyser } from '@/components/tools/nanovna-swr-analyser/NanoVNASWRAnalyser';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+---
+
+<BaseLayout title="NanoVNA SWR Analyser">
+  <div class="max-w-6xl mx-auto">
+    <div class="mb-8">
+      <h1 class="text-4xl font-bold mb-4">NanoVNA SWR Analyser</h1>
+      <p class="text-muted-foreground text-lg">
+        Analyze S-parameter/Touchstone files from your NanoVNA and visualize SWR data across amateur radio bands.
+      </p>
+    </div>
+
+    {/* Tool */}
+    <div class="mb-8">
+      <NanoVNASWRAnalyser client:load />
+    </div>
+
+    {/* Documentation */}
+    <div class="space-y-6">
+      <Card>
+        <CardHeader>
+          <CardTitle>About This Tool</CardTitle>
+        </CardHeader>
+        <CardContent className="prose prose-sm dark:prose-invert max-w-none">
+          <p>
+            This tool allows you to upload S-parameter/Touchstone files (.s1p or .s2p) exported from your NanoVNA
+            or other vector network analyzers. It calculates and displays the Standing Wave Ratio (SWR)
+            across amateur radio bands included within the file. 
+          </p>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>How to Use</CardTitle>
+        </CardHeader>
+        <CardContent className="prose prose-sm dark:prose-invert max-w-none">
+          <ol>
+            <li>Connect your antenna to your NanoVNA and perform a sweep across the desired frequency range</li>
+            <li>Export the measurement as an S1P file (for single-port measurements)</li>
+            <li>Upload the file using the tool above</li>
+            <li>Select the bands you want to analyze</li>
+            <li>Review the SWR charts for each band</li>
+          </ol>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Supported File Formats</CardTitle>
+        </CardHeader>
+        <CardContent className="prose prose-sm dark:prose-invert max-w-none">
+          <ul>
+            <li><strong>S1P</strong> - Single-port S-parameter files (S11 reflection data)</li>
+            <li><strong>S2P</strong> - Two-port S-parameter files (includes S11, S21, S12, S22)</li>
+          </ul>
+          <p>
+            The tool supports Touchstone format files with various data representations:
+            Real/Imaginary (RI), Magnitude/Angle (MA), and dB/Angle (DB).
+          </p>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</BaseLayout>

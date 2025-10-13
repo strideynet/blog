@@ -1,0 +1,57 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
+
+// Define tools directly for now
+// Later we could move this to a content collection if needed
+const tools = [
+  {
+    slug: 'nanovna-swr-analyser',
+    title: 'NanoVNA SWR Analyser',
+    description: 'Analyze S-parameter files from your NanoVNA and visualize SWR data across amateur radio bands',
+    tags: ['Amateur Radio', 'RF', 'Analysis'],
+  },
+];
+---
+
+<BaseLayout title="Tools">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold mb-8">Tools</h1>
+    <p class="text-muted-foreground mb-8">
+      Interactive tools and utilities for various technical tasks.
+    </p>
+    <div class="grid gap-6 md:grid-cols-2">
+      {tools.map((tool) => {
+        const url = `/tools/${tool.slug}`;
+
+        return (
+          <Card>
+            <CardHeader>
+              <CardTitle>
+                <a href={url} class="hover:text-primary transition-colors">
+                  {tool.title}
+                </a>
+              </CardTitle>
+            </CardHeader>
+            {tool.description && (
+              <CardContent>
+                <p class="text-muted-foreground">{tool.description}</p>
+              </CardContent>
+            )}
+            {tool.tags && tool.tags.length > 0 && (
+              <CardContent className="pt-0">
+                <div class="flex gap-2 flex-wrap">
+                  {tool.tags.map(tag => (
+                    <span class="px-2 py-1 bg-secondary text-secondary-foreground rounded-md text-sm">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </CardContent>
+            )}
+          </Card>
+        );
+      })}
+    </div>
+  </div>
+</BaseLayout>
