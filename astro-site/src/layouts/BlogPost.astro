@@ -1,0 +1,40 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+export interface Props {
+  title: string;
+  date: Date;
+  tags?: string[];
+  description?: string;
+}
+
+const { title, date, tags = [], description } = Astro.props;
+const formattedDate = new Date(date).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="max-w-4xl mx-auto">
+    <header class="mb-8">
+      <h1 class="text-4xl font-bold mb-4">{title}</h1>
+      <div class="flex items-center gap-4 text-muted-foreground">
+        <time datetime={date.toISOString()}>{formattedDate}</time>
+        {tags.length > 0 && (
+          <div class="flex gap-2">
+            {tags.map(tag => (
+              <span class="px-2 py-1 bg-secondary text-secondary-foreground rounded-md text-sm">
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+      </div>
+    </header>
+    <div class="prose prose-slate dark:prose-invert max-w-none">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

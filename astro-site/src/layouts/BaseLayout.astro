@@ -1,0 +1,98 @@
+---
+import '@/styles/globals.css';
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = 'Noah Stride', description = 'Writings & ramblings of a backend engineer.' } = Astro.props;
+const pageTitle = title === 'Noah Stride' ? title : `${title} | Noah Stride`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+
+    <!-- Google Analytics -->
+    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-PC65MQESZB"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PC65MQESZB');
+    </script>
+  </head>
+  <body>
+    <div class="min-h-screen bg-background">
+      <header class="border-b">
+        <div class="container mx-auto px-4 py-4">
+          <nav class="flex items-center justify-between">
+            <div class="flex items-center space-x-8">
+              <a href="/" class="text-xl font-bold">Noah Stride</a>
+              <div class="flex items-center space-x-6">
+                <a href="/" class="hover:text-primary transition-colors">Home</a>
+                <a href="/blog" class="hover:text-primary transition-colors">Blog</a>
+                <a href="/wiki" class="hover:text-primary transition-colors">Wiki</a>
+                <a href="/cv" class="hover:text-primary transition-colors">CV</a>
+              </div>
+            </div>
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-md hover:bg-accent"
+              aria-label="Toggle theme"
+            >
+              <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+              </svg>
+              <svg class="w-5 h-5 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+              </svg>
+            </button>
+          </nav>
+        </div>
+      </header>
+
+      <main class="container mx-auto px-4 py-8">
+        <slot />
+      </main>
+
+      <footer class="border-t mt-16">
+        <div class="container mx-auto px-4 py-8 text-center text-muted-foreground">
+          <p>&copy; {new Date().getFullYear()} Noah Stride.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Theme toggle functionality
+      const theme = (() => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark';
+        }
+        return 'light';
+      })();
+
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+
+      const themeToggle = document.getElementById('theme-toggle');
+      themeToggle?.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      });
+    </script>
+  </body>
+</html>

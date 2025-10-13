@@ -1,0 +1,41 @@
+---
+title: "Example Post with Interactive Calculator"
+date: 2024-01-15
+tags:
+  - Demo
+  - React
+description: "This post demonstrates how to embed interactive React components in blog posts using Astro."
+---
+
+import { SimpleCalculator } from '@/components/interactive/SimpleCalculator';
+
+This is an example blog post that demonstrates how you can embed interactive React components directly into your blog posts using Astro and MDX.
+
+## Interactive Calculator Demo
+
+Below is a fully functional calculator built with React and Shadcn UI components. Try it out!
+
+<SimpleCalculator client:load />
+
+## How It Works
+
+The calculator is a React component that lives in `src/components/interactive/SimpleCalculator.tsx`. By using MDX files instead of regular Markdown, we can import and use React components directly in our blog posts.
+
+The `client:load` directive tells Astro to hydrate this component on the client side, making it interactive.
+
+## Benefits
+
+- **Interactive Content**: Engage your readers with interactive demos and tools
+- **Type Safety**: Full TypeScript support for your components
+- **Reusable**: Components can be shared across multiple posts
+- **Performance**: Astro only loads JavaScript for interactive components
+
+You can create all sorts of interactive components:
+- Calculators
+- Data visualizations
+- Interactive demos
+- Code playgrounds
+- Games
+- And much more!
+
+This flexibility allows you to create rich, engaging content that goes beyond static text and images.

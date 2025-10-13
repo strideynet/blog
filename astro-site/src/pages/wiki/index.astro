@@ -1,0 +1,52 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
+
+const pages = await getCollection('wiki');
+
+// Sort pages alphabetically by title
+pages.sort((a, b) => a.data.title.localeCompare(b.data.title));
+---
+
+<BaseLayout title="Wiki">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold mb-8">Wiki</h1>
+    <p class="text-muted-foreground mb-8">
+      A collection of notes, guides, and documentation on various topics.
+    </p>
+    <div class="grid gap-6 md:grid-cols-2">
+      {pages.map((page) => {
+        const url = `/wiki/${page.slug}`;
+
+        return (
+          <Card>
+            <CardHeader>
+              <CardTitle>
+                <a href={url} class="hover:text-primary transition-colors">
+                  {page.data.title}
+                </a>
+              </CardTitle>
+            </CardHeader>
+            {page.data.description && (
+              <CardContent>
+                <p class="text-muted-foreground">{page.data.description}</p>
+              </CardContent>
+            )}
+            {page.data.tags && page.data.tags.length > 0 && (
+              <CardContent className="pt-0">
+                <div class="flex gap-2 flex-wrap">
+                  {page.data.tags.map(tag => (
+                    <span class="px-2 py-1 bg-secondary text-secondary-foreground rounded-md text-sm">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </CardContent>
+            )}
+          </Card>
+        );
+      })}
+    </div>
+  </div>
+</BaseLayout>

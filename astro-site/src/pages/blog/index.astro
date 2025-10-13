@@ -1,0 +1,58 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
+
+const posts = await getCollection('blog', ({ data }) => {
+  return data.draft !== true;
+});
+
+// Sort posts by date, newest first
+posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<BaseLayout title="Blog">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold mb-8">Blog</h1>
+    <div class="space-y-6">
+      {posts.map((post) => {
+        const slug = post.slug;
+        const url = `/blog/${slug}`;
+        const formattedDate = post.data.date.toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+
+        return (
+          <Card>
+            <CardHeader>
+              <CardTitle>
+                <a href={url} class="hover:text-primary transition-colors">
+                  {post.data.title}
+                </a>
+              </CardTitle>
+              <CardDescription>{formattedDate}</CardDescription>
+            </CardHeader>
+            {post.data.description && (
+              <CardContent>
+                <p class="text-muted-foreground">{post.data.description}</p>
+              </CardContent>
+            )}
+            {post.data.tags && post.data.tags.length > 0 && (
+              <CardContent className="pt-0">
+                <div class="flex gap-2">
+                  {post.data.tags.map(tag => (
+                    <span class="px-2 py-1 bg-secondary text-secondary-foreground rounded-md text-sm">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </CardContent>
+            )}
+          </Card>
+        );
+      })}
+    </div>
+  </div>
+</BaseLayout>

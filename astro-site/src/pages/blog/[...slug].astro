@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import BlogPost from '@/layouts/BlogPost.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+
+  return posts.map(post => {
+    // The slug should match the filename pattern: YYYY-MM-DD-title
+    // We keep this pattern to maintain Hugo URL compatibility
+    return {
+      params: { slug: post.slug },
+      props: { post }
+    };
+  });
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<BlogPost {...post.data}>
+  <Content />
+</BlogPost>

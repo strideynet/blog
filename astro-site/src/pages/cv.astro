@@ -1,0 +1,24 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import fs from 'fs/promises';
+import path from 'path';
+import matter from 'gray-matter';
+import { marked } from 'marked';
+
+// Read the CV content
+const cvPath = path.join(process.cwd(), 'src/content/cv.md');
+const cvContent = await fs.readFile(cvPath, 'utf-8');
+const { data, content } = matter(cvContent);
+
+// Convert markdown to HTML
+const htmlContent = marked(content);
+---
+
+<BaseLayout title={data.title || "CV"}>
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold mb-8">{data.title || "Curriculum Vitae"}</h1>
+    <div class="prose prose-slate dark:prose-invert max-w-none">
+      <Fragment set:html={htmlContent} />
+    </div>
+  </div>
+</BaseLayout>
