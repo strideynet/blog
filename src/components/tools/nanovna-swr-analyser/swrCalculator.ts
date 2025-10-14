@@ -30,10 +30,25 @@ export function calculateSWR(data: SParameterData): SWRPoint[] {
 
 /**
  * Filter SWR data for a specific frequency band
+ * @param swrPoints - All SWR data points
+ * @param band - The band to filter for
+ * @param bufferPercent - Additional buffer percentage of CENTER frequency (default 20%)
  */
-export function filterSWRByBand(swrPoints: SWRPoint[], band: Band): SWRPoint[] {
+export function filterSWRByBand(
+  swrPoints: SWRPoint[],
+  band: Band,
+  bufferPercent: number = 20
+): SWRPoint[] {
+  // Add buffer zone to capture data outside the band for frequency shifting
+  // Buffer is calculated as percentage of the center frequency to handle wide shifts
+  // This ensures we capture enough data even for large frequency shifts (±10%)
+  const centerFreq = (band.startFreq + band.endFreq) / 2;
+  const buffer = centerFreq * (bufferPercent / 100);
+  const minFreq = band.startFreq - buffer;
+  const maxFreq = band.endFreq + buffer;
+
   return swrPoints.filter(
-    point => point.frequency >= band.startFreq && point.frequency <= band.endFreq
+    point => point.frequency >= minFreq && point.frequency <= maxFreq
   );
 }
 
@@ -47,20 +62,27 @@ export function getBandSWRData(
   const bandDataArray: BandSWRData[] = [];
 
   for (const band of bands) {
+    // Get points with buffer for experimental shifting
     const bandPoints = filterSWRByBand(swrPoints, band);
 
     // Skip bands with no data
     if (bandPoints.length === 0) continue;
 
-    // Calculate statistics
-    const swrValues = bandPoints.map(p => p.swr);
+    // Calculate statistics only for points within the actual band boundaries
+    const pointsInBand = bandPoints.filter(
+      p => p.frequency >= band.startFreq && p.frequency <= band.endFreq
+    );
+
+    if (pointsInBand.length === 0) continue;
+
+    const swrValues = pointsInBand.map(p => p.swr);
     const minSWR = Math.min(...swrValues);
     const maxSWR = Math.max(...swrValues);
     const avgSWR = swrValues.reduce((a, b) => a + b, 0) / swrValues.length;
 
     bandDataArray.push({
       band,
-      swrPoints: bandPoints,
+      swrPoints: bandPoints, // Include buffered points for chart
       minSWR,
       maxSWR,
       avgSWR,
@@ -143,4 +165,26 @@ export function getSWRQuality(swr: number): {
       description: 'Significant power loss, tuning required',
     };
   }
+}
+
+/**
+ * Apply a frequency shift to SWR data points
+ * @param swrPoints - Original SWR data points
+ * @param shiftPercentage - Percentage change in element length (positive = longer, negative = shorter)
+ * @returns New SWR points with shifted frequencies
+ *
+ * Note: Element length and resonant frequency are inversely related.
+ * - Longer element (+%) → lower resonant frequency (shift left)
+ * - Shorter element (-%) → higher resonant frequency (shift right)
+ */
+export function applyFrequencyShift(
+  swrPoints: SWRPoint[],
+  shiftPercentage: number
+): SWRPoint[] {
+  // Invert the percentage to reflect the inverse relationship
+  const multiplier = 1 - shiftPercentage / 100;
+  return swrPoints.map(point => ({
+    frequency: point.frequency * multiplier,
+    swr: point.swr,
+  }));
 }

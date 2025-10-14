@@ -31,8 +31,12 @@ export const NanoVNASWRAnalyser: React.FC<NanoVNASWRAnalyserProps> = ({
   const [filename, setFilename] = useState<string>('');
   const [error, setError] = useState<string>('');
   const [selectedBands, setSelectedBands] = useState<Set<string>>(new Set());
-  const [showFullRangeChart, setShowFullRangeChart] = useState<boolean>(showFullRange);
   const [showBandPlanOverlay, setShowBandPlanOverlay] = useState<boolean>(showBandPlan);
+  const [showBufferZones, setShowBufferZones] = useState<boolean>(true);
+
+  // Experimental settings
+  const [experimentalEnabled, setExperimentalEnabled] = useState<boolean>(false);
+  const [frequencyShifts, setFrequencyShifts] = useState<Map<string, number>>(new Map());
 
   const handleFileLoad = useCallback(
     (content: string, loadedFilename: string) => {
@@ -113,7 +117,24 @@ export const NanoVNASWRAnalyser: React.FC<NanoVNASWRAnalyserProps> = ({
     setSWRPoints([]);
     setFilename('');
     setSelectedBands(new Set());
+    setFrequencyShifts(new Map());
     setError('');
+  }, []);
+
+  const updateBandShift = useCallback((bandName: string, shift: number) => {
+    setFrequencyShifts(prev => {
+      const newMap = new Map(prev);
+      newMap.set(bandName, shift);
+      return newMap;
+    });
+  }, []);
+
+  const resetBandShift = useCallback((bandName: string) => {
+    setFrequencyShifts(prev => {
+      const newMap = new Map(prev);
+      newMap.delete(bandName);
+      return newMap;
+    });
   }, []);
 
   return (
@@ -226,16 +247,7 @@ export const NanoVNASWRAnalyser: React.FC<NanoVNASWRAnalyserProps> = ({
                 </div>
 
                 {/* Display Options */}
-                <div className="flex gap-4 items-center pt-4 border-t">
-                  <label className="flex items-center gap-2 text-sm cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={showFullRangeChart}
-                      onChange={(e) => setShowFullRangeChart(e.target.checked)}
-                      className="w-4 h-4"
-                    />
-                    Show full range chart
-                  </label>
+                <div className="flex gap-4 items-center pt-4 border-t flex-wrap">
                   <label className="flex items-center gap-2 text-sm cursor-pointer">
                     <input
                       type="checkbox"
@@ -245,6 +257,24 @@ export const NanoVNASWRAnalyser: React.FC<NanoVNASWRAnalyserProps> = ({
                     />
                     Show RSGB band plan overlay
                   </label>
+                  <label className="flex items-center gap-2 text-sm cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={showBufferZones}
+                      onChange={(e) => setShowBufferZones(e.target.checked)}
+                      className="w-4 h-4"
+                    />
+                    Show buffer around band
+                  </label>
+                  <label className="flex items-center gap-2 text-sm cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={experimentalEnabled}
+                      onChange={(e) => setExperimentalEnabled(e.target.checked)}
+                      className="w-4 h-4"
+                    />
+                    Show experimental frequency shift
+                  </label>
                 </div>
               </>
             )}
@@ -252,8 +282,9 @@ export const NanoVNASWRAnalyser: React.FC<NanoVNASWRAnalyserProps> = ({
         </Card>
       )}
 
+
       {/* Full Range Chart */}
-      {swrPoints.length > 0 && showFullRangeChart && (
+      {swrPoints.length > 0 && (
         <SWRFullRangeChart
           swrPoints={swrPoints}
           bandData={bandData}
@@ -271,7 +302,12 @@ export const NanoVNASWRAnalyser: React.FC<NanoVNASWRAnalyserProps> = ({
                 key={band.band.name}
                 bandData={band}
                 showBandPlan={showBandPlanOverlay}
+                showBufferZones={showBufferZones}
                 height={chartHeight}
+                experimentalEnabled={experimentalEnabled}
+                frequencyShift={frequencyShifts.get(band.band.name) || 0}
+                onShiftChange={(shift) => updateBandShift(band.band.name, shift)}
+                onShiftReset={() => resetBandShift(band.band.name)}
               />
             ))}
         </div>
