@@ -1,9 +1,9 @@
 ---
-title: Amateur Radio (M9OTT)
+title: Amateur Radio (G5OTT)
 lastUpdated: '2025-10-13T20:10:18.564Z'
 ---
 
-Hey, I'm Noah - on the air, you'll know me as M9OTT. I obtained my foundation license in 2023 and my intermediate in 2025.
+Hey, I'm Noah - on the air, you'll know me as G5OTT. I obtained my foundation license in 2023, my intermediate in 2025 and my full in 2026.
 
 My QTH is London which limits my opportunities to operate. As such, I'll usually be found operating portable. Where I 
 can, I try to activate POTA parks! I'm fond of FT8 and SSB across 40, 30 and 20m bands.
@@ -28,8 +28,10 @@ Other interests:
 
 Callsign history:
 
+- G5OTT
+  - From 4th February 2026
 - M9OTT
-  - From 13th October 2025
+  - From 13th October 2025 until 4th February 2026
 - 2E1OTT
   - From 11th August 2025 until 13th October 2025
 - M7NOA 
