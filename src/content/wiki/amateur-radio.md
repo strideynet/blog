@@ -46,16 +46,16 @@ casual dip into a contest.
 - 2025 ARRL 10M
   - Results TBD
 - 2025 CQ WW SSB
-  - Multi-Single Low Power as M9PUP with M9PUP.
+  - Multi-Single Low Power as M9PUP w/ M9PUP.
   - 5th UK & Crown Dependencies
   - IC-7300 w/ DX Commander Venture
   - 506 QSOs - 193,756 Final Score
-  - Error Rate: 4.3%
+  - QSO Error Rate: 4.3%
   - Effort: 4/5
 - 2025 RSGB SSB Field Day
-  - Multi-Op Low Power Unassisted Portable as 2E1OTT/P with 2E1PUP
+  - Multi-Op Low Power Unassisted Portable as 2E1OTT/P w/ 2E1PUP
   - Leading Intermediate Station
   - IC-7300 w/ SOTABeam Bandhopper III
-  - 148 QSOs - 16,896 points
-  - Error Rate: 3.23%
+  - 148 QSOs - 16,896 Final Score
+  - QSO Error Rate: 3.23%
   - Effort: 3/5
