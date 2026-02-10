@@ -39,10 +39,23 @@ Callsign history:
 
 ## Contests
 
+I've entered contests with differing "levels of effort". I've scored the "effort" we've put into contests on a scale
+from 1-5. 5 would indicate building out a contest-specific station and assembling a team, and 1 would indicate a very
+casual dip into a contest.
+
+- 2025 ARRL 10M
+  - Results TBD
+- 2025 CQ WW SSB
+  - Multi-Single Low Power as M9PUP with M9PUP.
+  - 5th UK & Crown Dependencies
+  - IC-7300 w/ DX Commander Venture
+  - 506 QSOs - 193,756 Final Score
+  - Error Rate: 4.3%
+  - Effort: 4/5
 - 2025 RSGB SSB Field Day
-  - Multi-Op Low Power Unassisted Portable
+  - Multi-Op Low Power Unassisted Portable as 2E1OTT/P with 2E1PUP
   - Leading Intermediate Station
   - IC-7300 w/ SOTABeam Bandhopper III
-  - As 2E1OTT/P with 2E1PUP
   - 148 QSOs - 16,896 points
   - Error Rate: 3.23%
+  - Effort: 3/5
