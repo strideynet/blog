@@ -43,8 +43,17 @@ I've entered contests with differing "levels of effort". I've scored the "effort
 from 1-5. 5 would indicate building out a contest-specific station and assembling a team, and 1 would indicate a very
 casual dip into a contest.
 
-- 2025 ARRL 10M
+- 2026 CQ WPX SSB
+  - Multi-Single Low Power as G5OTT w/ M9PUP
+  - IC-7300 w/ DX Commander Venture
   - Results TBD
+  - 369,897 Raw Score
+  - Effort 4/5
+- 2025 ARRL 10M
+  - Multi-Single Low Power as M9OTT w/ M9PUP
+  - IC-7300 w/ DX Commander Venture
+  - Results TBD
+  - Effort 3/5
 - 2025 CQ WW SSB
   - Multi-Single Low Power as M9PUP w/ M9PUP.
   - 5th UK & Crown Dependencies
@@ -53,7 +62,7 @@ casual dip into a contest.
   - QSO Error Rate: 4.3%
   - Effort: 4/5
 - 2025 RSGB SSB Field Day
-  - Multi-Op Low Power Unassisted Portable as 2E1OTT/P w/ 2E1PUP
+  - Multi-Single Low Power Unassisted Portable as 2E1OTT/P w/ 2E1PUP
   - Leading Intermediate Station
   - IC-7300 w/ SOTABeam Bandhopper III
   - 148 QSOs - 16,896 Final Score
