@@ -1,24 +1,65 @@
 ---
+import { existsSync } from 'node:fs';
+import { resolve } from 'node:path';
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import fs from 'fs/promises';
-import path from 'path';
-import matter from 'gray-matter';
-import { marked } from 'marked';
+import { loadCv } from '@/lib/cv/load';
+import CvHeader from '@/components/cv/CvHeader.astro';
+import CvSection from '@/components/cv/CvSection.astro';
+import ExperienceItem from '@/components/cv/ExperienceItem.astro';
+import SkillGroups from '@/components/cv/SkillGroups.astro';
 
-// Read the CV content
-const cvPath = path.join(process.cwd(), 'src/content/cv.md');
-const cvContent = await fs.readFile(cvPath, 'utf-8');
-const { data, content } = matter(cvContent);
+// Single source of truth: the same YAML that generates the LaTeX/PDF. Invalid
+// data throws here and fails the build (see loadCv).
+const cv = loadCv();
 
-// Convert markdown to HTML
-const htmlContent = marked(content);
+// Only offer the PDF download if the generated PDF has been copied into public/
+// (npm run cv:pdf does this), so the link is never dead.
+const pdfHref = existsSync(resolve(process.cwd(), 'public/noah-stride-cv.pdf'))
+  ? '/noah-stride-cv.pdf'
+  : undefined;
+
+// Blank line starts a new paragraph (same rule as latex.ts). Summaries are YAML
+// literal (|) blocks, so a blank line is preserved as \n\n.
+const summaryParas = cv.summary
+  ? cv.summary
+      .trim()
+      .split(/\n\s*\n/)
+      .map((para) => para.replace(/\s+/g, ' ').trim())
+  : [];
 ---
 
-<BaseLayout title={data.title || "CV"}>
-  <div class="max-w-4xl mx-auto">
-    <h1 class="text-4xl font-bold mb-8">{data.title || "Curriculum Vitae"}</h1>
-    <div class="prose prose-slate dark:prose-invert max-w-none">
-      <Fragment set:html={htmlContent} />
-    </div>
-  </div>
+<BaseLayout title="CV" description={summaryParas[0]}>
+  <article class="mx-auto max-w-4xl">
+    <CvHeader contact={cv.contact} pdfHref={pdfHref} />
+
+    {
+      summaryParas.length > 0 && (
+        <CvSection title="Summary">
+          <div class="space-y-3">
+            {summaryParas.map((para) => (
+              <p class="text-sm sm:text-base">{para}</p>
+            ))}
+          </div>
+        </CvSection>
+      )
+    }
+
+    {
+      cv.experiences.length > 0 && (
+        <CvSection title="Experience">
+          {cv.experiences.map((exp) => (
+            <ExperienceItem experience={exp} />
+          ))}
+        </CvSection>
+      )
+    }
+
+    {
+      cv.skills.length > 0 && (
+        <CvSection title="Skills">
+          <SkillGroups skills={cv.skills} />
+        </CvSection>
+      )
+    }
+  </article>
 </BaseLayout>

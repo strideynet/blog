@@ -1,0 +1,200 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+%
+% NOTE: This is a TEMPLATE. The body is generated from cv/cv.yaml by
+% `npm run cv:tex`. Edit the preamble/macros here to change styling; edit
+% cv/cv.yaml to change content. The CONTACT / SUMMARY / EXPERIENCE / SKILLS
+% markers below are replaced at generation time (and are inert LaTeX comments
+% if this file is ever compiled directly).
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+% Prose paragraph between a subheading and its bullet list (label-less item).
+\newcommand{\resumeProse}[1]{\item\small{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Noah Stride} \\ \vspace{1pt}
+    \small +447988858546 $|$ \href{mailto:noah@noahstride.co.uk}{\underline{noah@noahstride.co.uk}} $|$ \href{https://linkedin.com/in/noah-stride}{\underline{linkedin.com/in/noah-stride}} $|$ \href{https://github.com/strideynet}{\underline{github.com/strideynet}}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+I'm Noah, a product-focussed engineer on a mission to meet users' needs — whether they be an internal team or a customer. You'll find me happiest in a role which lets me engage with users, participate actively in the product process, and solve plenty of challenging technical problems.
+
+\vspace{6pt}
+\noindent I currently lead a team building products in the workload identity space (an emerging field that's captured my heart), and over the past few years I've worked as a backend engineer and SRE at a variety of startups.
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \filbreak
+    \resumeSubheading
+      {Teleport $|$ Machine \& Workload Identity Lead}{May 2022 -- Present}
+      \resumeProse{Teleport is an open-source platform providing secure, easy zero-trust access to infrastructure. I own the direction of Machine ID — planning the future of the product and leading its execution — while engaging directly with customers: joining sales calls with prospects, supporting escalated issues, and interviewing customers to guide product direction.
+
+\vspace{4pt}
+\noindent More text}
+      \resumeItemListStart
+        \resumeItem{Achieved strong growth of Machine ID through a careful product process, basing decisions on customer interviews, detailed analytics, and a researched understanding of the product market.}
+        \resumeItem{Built rapport with prospects and customers, resolving their issues and working closely with them to inform the future of Machine ID.}
+        \resumeItem{Participated in a small working group of engineers that identified technical debt and set out new best practices for the codebase.}
+        \resumeItem{Discovered and contributed to fixing several high/critical severity vulnerabilities.}
+        \resumeItem{Delivered blog posts and talks representing myself and Teleport.}
+      \resumeItemListEnd
+      \resumeProse{\textit{Technologies: }Workload Identity (SPIFFE/WIMSE) $\cdot$ Identity and credentials (PKI/X.509, JWT, WIT, OIDC, OAuth2) $\cdot$ Go $\cdot$ Linux $\cdot$ Kubernetes $\cdot$ gRPC/Protobuf}
+
+    \filbreak
+    \resumeSubheading
+      {SPIFFE $|$ Steering Committee \& Maintainer}{Oct 2025 -- Present}
+      \resumeProse{SPIFFE SPIFFE SPIFFE}
+      \resumeItemListStart
+        \resumeItem{Did thing A}
+        \resumeItem{Did thing B}
+      \resumeItemListEnd
+
+    \filbreak
+    \resumeSubheading
+      {Krystal $|$ Senior Engineer (Cloud Platform)}{Apr 2021 -- Apr 2022}
+      \resumeProse{Joined to bring Go expertise to a team of strong Ruby engineers branching out to Go as part of their Katapult cloud platform.}
+      \resumeItemListStart
+        \resumeItem{Mentored engineers on idiomatic Go, helping a Ruby-experienced team come up to speed with the language.}
+        \resumeItem{Took responsibility for the Kubernetes PaaS on Katapult, building an operator to provision control-plane components for customer clusters and a CCM for those clusters to integrate with the wider platform.}
+        \resumeItem{Built a bespoke tool for managing the deployment of containerised applications onto Linux hosts where the complexity of Kubernetes was unnecessary.}
+      \resumeItemListEnd
+      \resumeProse{\textit{Technologies: }Go $\cdot$ Docker $\cdot$ Podman $\cdot$ Containerd $\cdot$ Kubernetes $\cdot$ gRPC}
+
+    \filbreak
+    \resumeSubheading
+      {Cudo Ventures $|$ Senior Engineer (Infrastructure \& SRE)}{Dec 2020 -- Apr 2021}
+      \resumeProse{Returned to Cudo to lead on SRE and operations matters, continuing to push for the uptake of Go and microservices using my experience from WalkUp.}
+      \resumeProse{\textit{Technologies: }GCP $\cdot$ Kubernetes $\cdot$ Prometheus $\cdot$ Grafana $\cdot$ Chronosphere $\cdot$ Pulumi $\cdot$ Helm $\cdot$ Go $\cdot$ Node.js $\cdot$ MySQL}
+
+    \filbreak
+    \resumeSubheading
+      {WalkUp $|$ Senior Backend Engineer}{Jun 2020 -- Dec 2020}
+      \resumeProse{Owned scaling the backend from 40,000 to over 800,000 customers per week in just three months — scoping out and rectifying reliability and scaling issues in a pre-existing codebase while balancing new feature work. Took on the mentorship of a junior backend engineer as the company grew. Event-driven microservices architecture with a focus on reliability and scalability.}
+      \resumeProse{\textit{Technologies: }Go $\cdot$ GCP $\cdot$ Kubernetes $\cdot$ Helm $\cdot$ Prometheus $\cdot$ Grafana $\cdot$ RabbitMQ $\cdot$ Redis $\cdot$ Firestore}
+
+    \filbreak
+    \resumeSubheading
+      {Cudo Ventures $|$ Software Engineer}{Aug 2018 -- Jun 2020}
+      \resumeProse{Joined as a fullstack engineer straight out of college, working on the Node.js API, Electron app and Vue web app. As the team grew my role shifted to backend development and infrastructure — managing Kubernetes clusters, observability tooling and deployment mechanisms — and providing support and mentoring as Cudo ran Go in production for the first time.}
+      \resumeProse{\textit{Technologies: }Vue $\cdot$ React $\cdot$ Electron $\cdot$ JavaScript $\cdot$ TypeScript $\cdot$ Go $\cdot$ GCP $\cdot$ Kubernetes $\cdot$ Ansible}
+
+    \filbreak
+    \resumeSubheading
+      {Freelancing \& Consulting $|$ Software Engineer}{Nov 2016 -- Aug 2018}
+      \resumeProse{Delivered freelance projects for a variety of clients with a focus on quality solutions that meet the client's needs — generally fullstack web applications — and consulted other developers on scaling and deploying their projects onto cloud platforms.}
+    \filbreak
+
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Technical}{: Workload Identity (SPIFFE/WIMSE) $\cdot$ Identity and credentials (PKI/X.509, JWT, WIT, OIDC, OAuth2) $\cdot$ Go $\cdot$ Protobuf/gRPC $\cdot$ Linux $\cdot$ Kubernetes $\cdot$ Networking (IP, TCP, TLS and SSH) $\cdot$ Distributed systems $\cdot$ Observability (OpenTelemetry and Prometheus)} \\
+     \textbf{Leadership \& Product}{: Planning and executing the product and technical aspects of an MVP $\cdot$ Customer interviews, support and product design $\cdot$ Incident response and management $\cdot$ Writing customer-facing documentation $\cdot$ Blog posts and conference talks $\cdot$ Team leadership and mentoring engineers}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}

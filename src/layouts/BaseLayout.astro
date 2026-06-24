@@ -8,6 +8,14 @@ export interface Props {
 
 const { title = 'Noah Stride', description = 'Writings & ramblings of a backend engineer.' } = Astro.props;
 const pageTitle = title === 'Noah Stride' ? title : `${title} | Noah Stride`;
+
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/wiki', label: 'Wiki' },
+  { href: '/tools', label: 'Tools' },
+  { href: '/cv', label: 'CV' },
+];
 ---
 
 <!doctype html>
@@ -33,29 +41,68 @@ const pageTitle = title === 'Noah Stride' ? title : `${title} | Noah Stride`;
     <div class="min-h-screen bg-background">
       <header class="border-b">
         <div class="container mx-auto px-4 py-4">
-          <nav class="flex items-center justify-between">
-            <div class="flex items-center space-x-8">
-              <a href="/" class="text-xl font-bold">Noah Stride</a>
-              <div class="flex items-center space-x-6">
-                <a href="/" class="hover:text-primary transition-colors">Home</a>
-                <a href="/blog" class="hover:text-primary transition-colors">Blog</a>
-                <a href="/wiki" class="hover:text-primary transition-colors">Wiki</a>
-                <a href="/tools" class="hover:text-primary transition-colors">Tools</a>
-                <a href="/cv" class="hover:text-primary transition-colors">CV</a>
+          <nav class="flex items-center justify-between gap-4">
+            <a href="/" class="text-xl font-bold">Noah Stride</a>
+
+            <div class="flex items-center gap-2 sm:gap-6">
+              <!-- Inline links (desktop) -->
+              <div class="hidden items-center gap-6 sm:flex">
+                {
+                  navLinks.map((link) => (
+                    <a href={link.href} class="hover:text-primary transition-colors">
+                      {link.label}
+                    </a>
+                  ))
+                }
               </div>
+
+              <button
+                id="theme-toggle"
+                class="p-2 rounded-md hover:bg-accent"
+                aria-label="Toggle theme"
+              >
+                <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                </svg>
+                <svg class="w-5 h-5 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
+              </button>
+
+              <!-- Collapsed links (mobile, no-JS disclosure) -->
+              <details class="relative sm:hidden">
+                <summary
+                  class="flex cursor-pointer list-none items-center rounded-md p-2 hover:bg-accent [&::-webkit-details-marker]:hidden"
+                  aria-label="Toggle navigation menu"
+                >
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <line x1="4" x2="20" y1="6" y2="6"></line>
+                    <line x1="4" x2="20" y1="12" y2="12"></line>
+                    <line x1="4" x2="20" y1="18" y2="18"></line>
+                  </svg>
+                </summary>
+                <div
+                  class="absolute right-0 z-50 mt-2 flex w-40 flex-col rounded-md border border-border bg-background p-2 shadow-lg"
+                >
+                  {
+                    navLinks.map((link) => (
+                      <a href={link.href} class="rounded-md px-3 py-2 hover:bg-accent transition-colors">
+                        {link.label}
+                      </a>
+                    ))
+                  }
+                </div>
+              </details>
             </div>
-            <button
-              id="theme-toggle"
-              class="p-2 rounded-md hover:bg-accent"
-              aria-label="Toggle theme"
-            >
-              <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
-              </svg>
-              <svg class="w-5 h-5 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-              </svg>
-            </button>
           </nav>
         </div>
       </header>

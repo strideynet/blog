@@ -1,0 +1,26 @@
+---
+import type { SkillGroup } from '@/lib/cv/schema';
+
+interface Props {
+  skills: SkillGroup[];
+}
+
+const { skills } = Astro.props;
+---
+
+<div class="space-y-3">
+  {
+    skills.map((group) => (
+      <div class="flex flex-col sm:flex-row sm:gap-4">
+        {group.name && (
+          <h3 class="mb-1 shrink-0 text-sm font-semibold sm:mb-0 sm:w-40">{group.name}</h3>
+        )}
+        <div class="flex flex-wrap gap-1.5">
+          {group.items.map((item) => (
+            <span class="rounded bg-secondary px-2 py-0.5 text-xs text-secondary-foreground">{item}</span>
+          ))}
+        </div>
+      </div>
+    ))
+  }
+</div>

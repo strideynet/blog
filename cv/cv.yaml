@@ -1,0 +1,134 @@
+# Noah Stride — CV single source of truth.
+#
+# Edit this file, then run:
+#   npm run cv:tex   # regenerate cv/noah-stride-cv.tex
+#   npm run cv:pdf   # also compile cv/noah-stride-cv.pdf (via Docker)
+#
+# Schema + docs: src/lib/cv/schema.ts. Dates are free-text — write them however
+# reads best. List experiences most-recent-first. Summaries are literal (|)
+# blocks — leave a blank line to start a new paragraph.
+
+contact:
+  name: Noah Stride
+  phone: "+447988858546"
+  email: noah@noahstride.co.uk
+  links:
+    - { label: linkedin.com/in/noah-stride, url: https://linkedin.com/in/noah-stride }
+    - { label: github.com/strideynet, url: https://github.com/strideynet }
+
+summary: |
+  I'm Noah, a product-focussed engineer on a mission to meet users' needs —
+  whether they be an internal team or a customer. You'll find me happiest in a
+  role which lets me engage with users, participate actively in the product
+  process, and solve plenty of challenging technical problems.
+
+  I currently lead a team building products in the workload identity space (an
+  emerging field that's captured my heart), and over the past few years I've
+  worked as a backend engineer and SRE at a variety of startups.
+
+experiences:
+  - employer: Teleport
+    title: "Machine & Workload Identity Lead"
+    dates: May 2022 -- Present
+    summary: |
+      Teleport is an open-source platform providing secure, easy zero-trust
+      access to infrastructure. I own the direction of Machine ID — planning the
+      future of the product and leading its execution — while engaging directly
+      with customers: joining sales calls with prospects, supporting escalated
+      issues, and interviewing customers to guide product direction.
+      
+      More text
+    highlights:
+      - Achieved strong growth of Machine ID through a careful product process, basing decisions on customer interviews, detailed analytics, and a researched understanding of the product market.
+      - Built rapport with prospects and customers, resolving their issues and working closely with them to inform the future of Machine ID.
+      - Participated in a small working group of engineers that identified technical debt and set out new best practices for the codebase.
+      - Discovered and contributed to fixing several high/critical severity vulnerabilities.
+      - Delivered blog posts and talks representing myself and Teleport.
+    technologies:
+      - Workload Identity (SPIFFE/WIMSE)
+      - Identity and credentials (PKI/X.509, JWT, WIT, OIDC, OAuth2)
+      - Go
+      - Linux
+      - Kubernetes
+      - gRPC/Protobuf
+
+  - employer: SPIFFE
+    title: "Steering Committee & Maintainer"
+    dates: Oct 2025 -- Present
+    summary: |
+      SPIFFE SPIFFE SPIFFE
+    highlights:
+      - Did thing A
+      - Did thing B
+
+  - employer: Krystal
+    title: Senior Engineer (Cloud Platform)
+    dates: Apr 2021 -- Apr 2022
+    summary: |
+      Joined to bring Go expertise to a team of strong Ruby engineers branching
+      out to Go as part of their Katapult cloud platform.
+    highlights:
+      - Mentored engineers on idiomatic Go, helping a Ruby-experienced team come up to speed with the language.
+      - Took responsibility for the Kubernetes PaaS on Katapult, building an operator to provision control-plane components for customer clusters and a CCM for those clusters to integrate with the wider platform.
+      - Built a bespoke tool for managing the deployment of containerised applications onto Linux hosts where the complexity of Kubernetes was unnecessary.
+    technologies: [Go, Docker, Podman, Containerd, Kubernetes, gRPC]
+
+  - employer: Cudo Ventures
+    title: Senior Engineer (Infrastructure & SRE)
+    dates: Dec 2020 -- Apr 2021
+    summary: |
+      Returned to Cudo to lead on SRE and operations matters, continuing to push
+      for the uptake of Go and microservices using my experience from WalkUp.
+    technologies: [GCP, Kubernetes, Prometheus, Grafana, Chronosphere, Pulumi, Helm, Go, Node.js, MySQL]
+
+  - employer: WalkUp
+    title: Senior Backend Engineer
+    dates: Jun 2020 -- Dec 2020
+    summary: |
+      Owned scaling the backend from 40,000 to over 800,000 customers per week in
+      just three months — scoping out and rectifying reliability and scaling
+      issues in a pre-existing codebase while balancing new feature work. Took on
+      the mentorship of a junior backend engineer as the company grew. Event-driven
+      microservices architecture with a focus on reliability and scalability.
+    technologies: [Go, GCP, Kubernetes, Helm, Prometheus, Grafana, RabbitMQ, Redis, Firestore]
+
+  - employer: Cudo Ventures
+    title: Software Engineer
+    dates: Aug 2018 -- Jun 2020
+    summary: |
+      Joined as a fullstack engineer straight out of college, working on the
+      Node.js API, Electron app and Vue web app. As the team grew my role shifted
+      to backend development and infrastructure — managing Kubernetes clusters,
+      observability tooling and deployment mechanisms — and providing support and
+      mentoring as Cudo ran Go in production for the first time.
+    technologies: [Vue, React, Electron, JavaScript, TypeScript, Go, GCP, Kubernetes, Ansible]
+
+  - employer: Freelancing & Consulting
+    title: Software Engineer
+    dates: Nov 2016 -- Aug 2018
+    summary: |
+      Delivered freelance projects for a variety of clients with a focus on
+      quality solutions that meet the client's needs — generally fullstack web
+      applications — and consulted other developers on scaling and deploying
+      their projects onto cloud platforms.
+
+skills:
+  - name: Technical
+    items:
+      - Workload Identity (SPIFFE/WIMSE)
+      - Identity and credentials (PKI/X.509, JWT, WIT, OIDC, OAuth2)
+      - Go
+      - Protobuf/gRPC
+      - Linux
+      - Kubernetes
+      - Networking (IP, TCP, TLS and SSH)
+      - Distributed systems
+      - Observability (OpenTelemetry and Prometheus)
+  - name: Leadership & Product
+    items:
+      - Planning and executing the product and technical aspects of an MVP
+      - Customer interviews, support and product design
+      - Incident response and management
+      - Writing customer-facing documentation
+      - Blog posts and conference talks
+      - Team leadership and mentoring engineers

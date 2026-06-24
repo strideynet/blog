@@ -7,6 +7,8 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "cv:tex": "tsx scripts/generate-cv.ts",
+    "cv:pdf": "tsx scripts/generate-cv.ts --pdf",
     "deploy": "npm run build && wrangler pages deploy dist",
     "deploy:preview": "npm run build && wrangler pages deploy dist --branch preview"
   },
@@ -28,12 +30,15 @@
     "react-chartjs-2": "^5.3.0",
     "react-dom": "^19.2.0",
     "tailwind-merge": "^3.3.1",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "fs-extra": "^11.3.2",
-    "gray-matter": "^4.0.3"
+    "gray-matter": "^4.0.3",
+    "tsx": "^4.22.4",
+    "yaml": "^2.9.0"
   }
 }

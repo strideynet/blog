@@ -1,0 +1,61 @@
+---
+import type { Experience } from '@/lib/cv/schema';
+import { displayDates } from '@/lib/cv/dates';
+
+interface Props {
+  experience: Experience;
+}
+
+const { experience: exp } = Astro.props;
+
+const dates = displayDates(exp.dates);
+
+// Blank line starts a new paragraph (same rule as latex.ts). Summaries are YAML
+// literal (|) blocks, so a blank line is preserved as \n\n.
+const summaryParas = exp.summary
+  ? exp.summary
+      .trim()
+      .split(/\n\s*\n/)
+      .map((para) => para.replace(/\s+/g, ' ').trim())
+  : [];
+---
+
+<div class="mt-6 first:mt-0">
+  {/* Employer + date range: stacked on mobile, two-column on desktop. */}
+  <div class="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
+    <h3 class="font-semibold">{exp.employer}</h3>
+    <span class="shrink-0 text-sm text-muted-foreground">{dates}</span>
+  </div>
+
+  <p class="mt-0.5 text-sm italic text-muted-foreground">{exp.title}</p>
+
+  {
+    summaryParas.length > 0 && (
+      <div class="mt-2 space-y-2">
+        {summaryParas.map((para) => (
+          <p class="text-sm sm:text-base">{para}</p>
+        ))}
+      </div>
+    )
+  }
+
+  {
+    exp.highlights.length > 0 && (
+      <ul class="mt-2 list-disc space-y-1 pl-5 text-sm sm:text-base">
+        {exp.highlights.map((highlight) => (
+          <li>{highlight}</li>
+        ))}
+      </ul>
+    )
+  }
+
+  {
+    exp.technologies.length > 0 && (
+      <div class="mt-3 flex flex-wrap gap-1.5">
+        {exp.technologies.map((tech) => (
+          <span class="rounded bg-secondary px-2 py-0.5 text-xs text-secondary-foreground">{tech}</span>
+        ))}
+      </div>
+    )
+  }
+</div>
